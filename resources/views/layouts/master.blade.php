@@ -47,9 +47,37 @@
         <div class="header-section">
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center">
+                    <!-- Side Header Toggle & Search Start -->
+                    <div class="col-auto">
+                        <div class="row align-items-center">
 
+                            <!--Side Header Toggle-->
+                            <div class="col-auto"><button class="side-header-toggle"><i
+                                        class="zmdi zmdi-menu"></i></button></div>
+
+                            <!--Header Search-->
+                            <div class="col-auto">
+
+                                <div class="header-search">
+
+                                    <button class="header-search-open d-block d-xl-none"><i
+                                            class="zmdi zmdi-search"></i></button>
+
+                                    <!-- <div class="header-search-form">
+                                                <form action="#">
+                                                    <input type="text" placeholder="Search Here">
+                                                    <button><i class="zmdi zmdi-search"></i></button>
+                                                </form>
+                                                <button class="header-search-close d-block d-xl-none"><i class="zmdi zmdi-close"></i></button>
+                                            </div> -->
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- Side Header Toggle & Search End -->
                     <!-- Header Logo (Header Left) Start -->
-                    <div class="header-logo col-auto">
+                    <div class="header-logo" style="width: 0px; max-width:100%; ">
                         <a href="#">
                             <div class="row">
 
@@ -68,16 +96,16 @@
                                 <div class="row align-items-center">
 
                                     <!--Side Header Toggle-->
-                                    <div class="col-auto"><button class="side-header-toggle"><i
-                                                class="zmdi zmdi-menu"></i></button></div>
+                                    <!-- <div class="col-auto"><button class="side-header-toggle"><i
+                                                class="zmdi zmdi-menu"></i></button></div> -->
 
                                     <!--Header Search-->
                                     <div class="col-auto">
 
                                         <div class="header-search">
 
-                                            <button class="header-search-open d-block d-xl-none"><i
-                                                    class="zmdi zmdi-search"></i></button>
+                                            <!-- <button class="header-search-open d-block d-xl-none"><i
+                                                    class="zmdi zmdi-search"></i></button> -->
 
                                             <!-- <div class="header-search-form">
                                                 <form action="#">
@@ -109,9 +137,9 @@
                                                     <span class="status"></span>
                                                 </span>
                                             </span>
-                                            
+
                                         </a>
-                                        
+
 
                                         <!-- Dropdown -->
                                         <div class="adomx-dropdown-menu dropdown-menu-user">
@@ -171,7 +199,8 @@
                     </ul>
                 </nav>
             </div><!-- Side Header Inner End -->
-            <div class="ml-3 ">Masuk sebagai {{ Auth::user()->role === 'receptionist' ? 'resepsionis' : 'dokter' }}</div>
+            <div class="ml-3 ">Masuk sebagai {{ Auth::user()->role === 'receptionist' ? 'resepsionis' : 'dokter' }}
+            </div>
         </div><!-- Side Header End -->
 
         <!-- Content Body Start -->

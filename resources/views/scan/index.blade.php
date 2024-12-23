@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="confirmationRegisteredUserModal" inert>
+    <div class="modal fade" id="confirmationRegisteredUserModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -158,10 +158,10 @@
         window.location.href = '/scan-patient-list-medical-records?id=' + selectedLog.rfid_tag;
     })
 
-    // $('.cancelAppointment').click((e) => {
-    //     e.preventDefault()
-    //     completeLog(selectedLog.id)
-    // })
+    $('.cancelAppointment').click((e) => {
+        e.preventDefault()
+        completeLog(selectedLog.id)
+    })
 </script>
 
 @endsection
