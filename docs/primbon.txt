@@ -1,0 +1,17 @@
+scan-patient-detail-medical-record?id=1
+scan-patient-detail-medical-record?id=%3C12345678%3E&medical-id=1
+scan-patient-doctor-medical-record?id=%3C12345678%3E&medical-id=1
+
+Telkomedika - Dashboard
+
+Tanggal Pemeriksaan	Nama Dokter	Nama Pasien	No Telkomedika	Status	Aksi
+2024-12-18	joysya	Afap Salsabila	567890	Selesai	', '1')">Lihat Detail
+2024-12-18	joysya	Afap Salsabila	567890	Selesai	', '2')">Lihat Detail
+
+192.168.1.14:8000
+php artisan serve --host=0.0.0.0 --port=8000
+
+
+40 41 103
+
+String httpRequestData = "api_key=tPmAT5Ab3j7F9&sensor=BME280&value1=24.25&value2=49.54&value3=1005.14";

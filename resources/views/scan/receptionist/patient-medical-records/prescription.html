@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetak Resep</title>
+    <style>
+        #prescriptionView {
+            display: none;
+            /* Sembunyikan tampilan awalnya */
+        }
+
+        @media print {
+            body>*:not(#prescriptionView) {
+                display: none;
+                /* Hanya tampilkan tampilan resep saat cetak */
+            }
+
+            #prescriptionView {
+                display: block;
+            }
+        }
+
+        .prescription-container {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+        }
+
+        .prescription-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .prescription-details {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button type="button" class="button button-warning" data-toggle="tooltip" data-placement="top"
+        title="Tooltip di atas" id="printPrescription">Cetak Resep</button>
+
+    <div id="prescriptionView" class="prescription-container">
+        <div class="prescription-header">
+            <h2>Resep Dokter</h2>
+            <p>Tanggal: <span id="prescriptionDate"></span></p>
+            <p>No. Resep: <span id="prescriptionNumber"></span></p>
+        </div>
+        <div class="prescription-details">
+            <p>Nama Dokter: <span id="doctorName"></span></p>
+            <p>Nama Pasien: <span id="patientName"></span></p>
+            <p>Jenis Kelamin: <span id="patientGender"></span></p>
+            <p>Usia: <span id="patientAge"></span></p>
+        </div>
+        <div class="prescription-medicine">
+            <h3>Detail Resep:</h3>
+            <p id="prescriptionDetails"></p>
+        </div>
+    </div>
+
+    <script>
+        const prescriptionData = {
+            date: new Date().toLocaleDateString(),
+            number: "RX-123456",
+            doctorName: "Dr. John Doe",
+            patientName: "Jane Smith",
+            gender: "Perempuan",
+            age: "29",
+            details: "Amoksisilin 500mg - Minum 1 kapsul setiap 8 jam selama 7 hari."
+        };
+
+        document.getElementById("printPrescription").addEventListener("click", function () {
+            document.getElementById("prescriptionDate").textContent = prescriptionData.date;
+            document.getElementById("prescriptionNumber").textContent = prescriptionData.number;
+            document.getElementById("doctorName").textContent = prescriptionData.doctorName;
+            document.getElementById("patientName").textContent = prescriptionData.patientName;
+            document.getElementById("patientGender").textContent = prescriptionData.gender;
+            document.getElementById("patientAge").textContent = prescriptionData.age;
+            document.getElementById("prescriptionDetails").textContent = prescriptionData.details;
+
+            window.print();
+        });
+
+    </script>
+
+</body>
+
+</html>

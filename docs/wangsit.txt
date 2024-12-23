@@ -1,0 +1,22 @@
+Database:
+    How to execute query:
+        telkomedika_rfid_db -> SQL Editor -> New SQL Script
+    
+    Example query:
+        SELECT * FROM patients p 
+        DELETE FROM patients WHERE id=1
+        DELETE FROM patients WHERE id BETWEEN 1 AND 3
+        DELETE FROM patients WHERE id IN (1,3)
+
+Prerequisite:
+    Connect both devices to the same wi-fi
+        Macbook: 
+            Setting -> wifi -> Network Setting on connected wifi -> IP address
+        Lenovo:
+            Arduino IDE:
+                update wifi credentials (ssid and password)
+                update IP address on http request (url) 
+
+    How to run web app:
+        php artisan serve --host=0.0.0.0 --port=8000
+
